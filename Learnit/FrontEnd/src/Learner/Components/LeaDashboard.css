@@ -1,0 +1,184 @@
+/* Global Defaults */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: auto;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #12121c;
+}
+
+/* Container Styling */
+.dashboard-profile {
+  max-width: 1000px;
+  margin: 10px auto;
+  padding: 13px;
+  background-color: #1e1e2f;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  box-sizing: border-box;
+  min-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* Layout: Left (details) + Right (image/buttons) */
+.profile-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Profile Details (Left) */
+.profile-details {
+  flex: 1;
+  background-color: #2a2a3d;
+  border-radius: 15px;
+  padding: 25px 30px;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.profile-details p {
+  margin: 10px 0;
+  word-wrap: break-word;
+}
+
+.profile-details strong {
+  display: inline-block;
+  width: 160px;
+  color: #cccccc;
+  font-weight: 500;
+}
+
+.profile-details a {
+  color: #64b5f6;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.profile-details a:hover {
+  text-decoration: underline;
+}
+
+/* Profile Header (Right) */
+.profile-header {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #444;
+  margin-bottom: 12px;
+}
+
+/* Profile Buttons */
+.profile-btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.change-btn,
+.remove-btn,
+.edit-btn {
+  background-color: #b388ff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+
+.remove-btn {
+  background-color: #e57373;
+}
+
+.change-btn:hover,
+.edit-btn:hover {
+  background-color: #a167ff;
+}
+
+.remove-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Edit Button (Below Details) */
+.edit-btn {
+  background-color: #b388ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .profile-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-header {
+    width: 100%;
+  }
+
+  .profile-details {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .edit-btn {
+    align-self: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-profile {
+    padding: 20px 15px 40px;
+    margin: 10px;
+  }
+
+  .profile-details strong {
+    width: 120px;
+  }
+
+  .change-btn,
+  .remove-btn,
+  .edit-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .profile-pic {
+    width: 110px;
+    height: 110px;
+  }
+}
